@@ -1,0 +1,20 @@
+Package: EXDC
+Title: Functions for Estimating the Degree of Dosage Compensation at X-Linked Loci
+Version: 1.0.0.9000
+Authors@R: 
+    person("Yuxin", "Yuan", , "yuxinyuan2000@163.com", role = c("aut", "cre"),
+           comment = c(ORCID = "https://orcid.org/0000-0002-5497-7787"))
+Description: EXDC provides tools for estimating the degree of dosage compensation at X-linked loci.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Imports:
+    stats
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

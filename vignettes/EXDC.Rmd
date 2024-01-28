@@ -1,0 +1,28 @@
+---
+title: "Introduction to EXDC"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to EXDC}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(EXDC)
+data("Graves_Meta_analysis")
+Frequen_DC(Graves_Meta_analysis$rs3827440,
+           Graves_Meta_analysis$Graves_disease,
+           trait_type='qualitative',
+           Graves_Meta_analysis$Sex,
+           method='all',con_level=0.95,
+           truncation_interval=TRUE,
+           truncation_lower=1,truncation_upper=2,
+           description=TRUE,H0_test=TRUE,DC_0=2)
+```
